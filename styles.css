@@ -1,0 +1,79 @@
+/* @link https://utopia.fyi/type/calculator?c=350,16,1.2,600,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --f-xxs: clamp(0.69rem, calc(0.32rem + 1.7vw), 0.96rem);
+  --f-xs: clamp(0.83rem, calc(0.32rem + 2.35vw), 1.2rem);
+  --f-s: clamp(1rem, calc(0.3rem + 3.2vw), 1.5rem);
+  --f-m: clamp(1.2rem, calc(0.26rem + 4.32vw), 1.88rem);
+  --f-l: clamp(1.44rem, calc(0.17rem + 5.78vw), 2.34rem);
+  --f-xl: clamp(1.73rem, calc(0.05rem + 7.69vw), 2.93rem);
+  --f-xxl: clamp(2.07rem, calc(-0.15rem + 10.16vw), 3.66rem);
+  --f-xxxl: clamp(2.49rem, calc(-0.44rem + 13.37vw), 4.58rem);
+}
+
+html {
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {min-height: 100%;}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 16rem;
+  grid-template-areas: "card-img card-description";
+  max-width: 600px;
+  border: 4px solid #4b3124;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card-img {
+  grid-area: card-img;
+  background-image: url(imagenes/imagen.webp);
+  background-size: cover;
+  background-position: 20%;
+}
+
+.card-description {
+  grid-area: card-description;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+  background-color: #d6d3c0;
+}
+
+.card-text {font-size: var(--f-xs);}
+
+.card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--f-l);
+}
+
+.card-link {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #875e40;
+  cursor: pointer;
+}
